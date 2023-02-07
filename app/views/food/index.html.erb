@@ -13,9 +13,9 @@
     <tbody>
       <tr>
       <% @foods.each do |food| %>
-        <%= food.name %>
-        <%= food.measurement_unit %>
-        <%= `$#{food.price}` %>
+        <td><%= food.name %></td> 
+        <td><%= food.measurement_unit %></td>
+        <td><%= `$#{food.price}` %></td>
         <td>Delete</td>
       <% end %>
       </tr>
