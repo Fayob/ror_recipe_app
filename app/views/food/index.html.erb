@@ -1,0 +1,25 @@
+<% if @foods.empty? %>
+  <p>You currently have no food </p>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th> 
+        <th>Measurement Unit</th> 
+        <th>Unit Price</th> 
+        <th>Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+      <% @foods.each do |food| %>
+        <td><%= food.name %></td> 
+        <td><%= food.measurement_unit %></td>
+        <td><%= `$#{food.price}` %></td>
+        <td>Delete</td>
+      <% end %>
+      </tr>
+    </tbody>
+
+  </table>
+<% end %>
