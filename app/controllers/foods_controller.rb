@@ -1,5 +1,4 @@
 class FoodsController < ApplicationController
-
   def index
     @foods = Food.where(user: current_user)
   end
@@ -9,11 +8,11 @@ class FoodsController < ApplicationController
   end
 
   def create
-    @food = Food.new(user: current_user, name: food_param['name'], 
-                    measurement_unit: food_param['measurement_unit'],
-                    price: food_param['price'], quantity: food_param['quantity'])
+    @food = Food.new(user: current_user, name: food_param['name'],
+                     measurement_unit: food_param['measurement_unit'],
+                     price: food_param['price'], quantity: food_param['quantity'])
     if @food.save
-      flash[:notice] = "Food Added Successfully"
+      flash[:notice] = 'Food Added Successfully'
       redirect_to foods_path
     else
       render 'new'
