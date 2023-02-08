@@ -1,25 +1,26 @@
 <% if @foods.empty? %>
-  <p>You currently have no food </p>
+  <p>You currently don't have any food available </p>
+  <%= link_to 'Add Food', new_food_path %>
 <% else %>
   <table>
     <thead>
       <tr>
         <th>Food</th> 
         <th>Measurement Unit</th> 
-        <th>Unit Price</th> 
+        <th>Price</th> 
         <th>Action</th> 
       </tr>
     </thead>
     <tbody>
-      <tr>
       <% @foods.each do |food| %>
+      <tr>
         <td><%= food.name %></td> 
         <td><%= food.measurement_unit %></td>
-        <td><%= `$#{food.price}` %></td>
-        <td>Delete</td>
-      <% end %>
+        <td><%= '$' + food.price.to_s %></td>
+        <td><%=  button_to 'Delete', food_path(food), method: :delete %> </td>
       </tr>
+      <% end %>
     </tbody>
-
-  </table>
+  </table><br>
+  <%= link_to 'Add Food', new_food_path %>
 <% end %>
