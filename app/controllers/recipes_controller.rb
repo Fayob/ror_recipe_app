@@ -19,10 +19,10 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipee.new(user: current_user, name: recipe_param['name'],
-      public: public?,
-      description: recipe_param['description'], 
-      preparation_time: recipe_param['preparation_time'],
-      cooking_time: recipe_param['cooking_time'])
+                          public: public?,
+                          description: recipe_param['description'],
+                          preparation_time: recipe_param['preparation_time'],
+                          cooking_time: recipe_param['cooking_time'])
     if @recipe.save
       flash[:notice] = 'Recipe Added Successfully'
       redirect_to recipes_path
