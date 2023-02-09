@@ -1,0 +1,26 @@
+<% if @foods.empty? %>
+  <p>You currently don't have any food available </p>
+  <%= link_to 'Add Food', new_food_path %>
+<% else %>
+  <table>
+    <thead>
+      <tr>
+        <th>Food</th> 
+        <th>Measurement Unit</th> 
+        <th>Price</th> 
+        <th>Action</th> 
+      </tr>
+    </thead>
+    <tbody>
+      <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.name %></td> 
+        <td><%= food.measurement_unit %></td>
+        <td><%= '$' + food.price.to_s %></td>
+        <td><%=  button_to 'Delete', food_path(food), form: { data: { turbo_confirm: "Are you sure?" } },  method: :delete %> </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table><br>
+  <%= link_to 'Add Food', new_food_path %>
+<% end %>
