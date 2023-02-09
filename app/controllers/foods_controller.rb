@@ -1,4 +1,6 @@
 class FoodsController < ApplicationController
+  # load_and_authorize_resource
+
   def index
     @foods = Food.where(user: current_user)
   end
@@ -21,6 +23,10 @@ class FoodsController < ApplicationController
 
   def destroy
     Food.destroy(params[:id])
+    respond_to do |format|
+      format.html { redirect_to foods_path, notice: 'food was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
 
   private
