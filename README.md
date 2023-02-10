@@ -1,6 +1,8 @@
-<a name="readme-top"></a>
 
-<!-- TABLE OF CONTENTS -->
+<div align="center">
+  <h3><b>Recipe App README</b></h3>
+
+</div>
 
 # 📗 Table of Contents
 
@@ -25,11 +27,11 @@
 - [❓ FAQ](#faq)
 - [📝 License](#license)
 
-<!-- PROJECT DESCRIPTION -->
 
-# 📖 Blog App <a name="about-project"></a>
+# 📖 Recipe App <a name="about-project"></a>
 
-**Blog App** will be a classic example of a blog website. You will create a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
+The Recipe app keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes.
+
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -38,15 +40,9 @@
 <details>
   <summary>Client</summary>
   <ul>
+    <li><a href="https://ruby-lang.org/">Ruby</a></li>
     <li>HTML, CSS</li>
     <li>JavaScript</li>
-  </ul>
-</details>
-
-<details>
-  <summary>Server</summary>
-  <ul>
-    <li>Ruby on Rails</li>
   </ul>
 </details>
 
@@ -57,26 +53,12 @@
   </ul>
 </details>
 
-<!-- Features -->
-
 ### Key Features <a name="key-features"></a>
 
-- **[Create and run necessary migration files]**
-- **[Match table and column names to the ERD diagram.]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ER DIAGRAM-->
-
-## :card_index: Entity Relationship Diagram <a name="er-diagram"></a>
-
-![er-diagram](https://user-images.githubusercontent.com/84629565/203113736-82dacec0-6b75-42e6-b87e-8bf441ffbe57.png)
-
-<!-- LIVE DEMO -->
-
-## 🚀 Live Demo <a name="live-demo"></a>
-
-- in progress :smile: [Live Demo Link]()
+- Add a new food
+- Add a new recipe
+- Delete foods and recipes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,8 +73,20 @@ To get a local copy up and running, follow these steps.
 In order to run this project you need:
 `Git` and `Ruby`
 
-```
- gem install rails
+
+- A text editor preferably [Visual Studio code](https://code.visualstudio.com/)
+- Latest version of [Ruby](https://www.ruby-lang.org/en/downloads/) installed
+- [PostgreSQL Server](https://www.postgresql.org/download/)
+
+
+### Setup
+
+Clone this [repository](https://github.com/Fayob/catalog_of_my_things) to your desired folder:
+
+```sh
+  cd my-folder
+  git clone git@github.com:Fayob/ror_recipe_app.git
+  cd ror_recipe_app.git
 ```
 
 ### Install
@@ -100,48 +94,47 @@ In order to run this project you need:
 Install this project with:
 
 ```sh
+  gem install
+```
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  rspec
   bundle install
 ```
 
-### Usage
-
-To run the project, execute the following command:
-
-```sh
-  rails server or rails s
-```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
 
+
+👤 **Abimbola Favour**
+
+- GitHub: [@fayob](https://github.com/fayob)
+- Twitter: [@fabimworld](https://twitter.com/Fabimworld2536)
+- LinkedIn: [abimbola-ade](http://linkedin.com/in/abimbola-ade/)
+
 👤 **Ashwin Carvalho**
 
-- GitHub: [@gitHubhandle](https://github.com/AshwinCarvalho999)
-- Twitter: [@twitterhandle](https://twitter.com)
-- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ashwin-carvalho-5426701b1/)
-
-👤 **Joel Kugonza**
-
-- GitHub: [@JoelKugonza](https://github.com/Joel-100)
-- Twitter: [@JoelKugonza](https://twitter.com/JoelKugonza)
-- LinkedIn: [JoelKugonza](https://www.linkedin.com/in/joel-kugonza/
+- GitHub: [@ashwincarvalho](https://github.com/AshwinCarvalho999)
+- LinkedIn: [ashwin](https://www.linkedin.com/in/ashwin-carvalho-5426701b1/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Controllers specs]**
-- [ ] **[Processing data in models]**
-- [ ] **[Views]**
+
+- [ ] A graphical user interface
+- [ ] Better information validation
+- [ ] An API backend to store the data
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- CONTRIBUTING -->
 
 ## 🤝 Contributing <a name="contributing"></a>
 
@@ -151,40 +144,36 @@ Feel free to check the [issues page](../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
 
 ## ⭐️ Show your support <a name="support"></a>
 
-Give a ⭐️ if you like this project!
+If you like this project, please leave a star 😁
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank:
 
-- [Microverse](microverse.org)
-- Code Reviewers
+We would like to thank the Microverse staff for all the efforts they put in define the requirements of this project.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FAQ (optional) -->
 
 ## ❓ FAQ <a name="faq"></a>
 
-- **[Question_1d]**
 
-  - [Answer_1]
+- **Can I reuse this code?**
 
-- **[Question_2]**
+  - Yes, feel free to fork it
 
-  - [Answer_2]
+
+- **Do I need knowledge of Ruby to use this project?**
+
+  - No you do not.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-<!-- LICENSE -->
 
 ## 📝 License <a name="license"></a>
 
