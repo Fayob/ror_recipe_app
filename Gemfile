@@ -75,4 +75,4 @@ end
 gem 'devise'
 
 # cancancan gem
-gem 'cancancan'
+gem 'cancancan', '~> 3.0'
