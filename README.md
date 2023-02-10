@@ -1,3 +1,4 @@
+
 <div align="center">
   <h3><b>Recipe App README</b></h3>
 
@@ -9,6 +10,7 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+  - [:card_index: Entity Relationship Diagram](#er-diagram)
   - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
@@ -22,10 +24,11 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
+- [❓ FAQ](#faq)
 - [📝 License](#license)
 
-# 📖 CATALOG_OF_THINGS <a name="about-project"></a>
+
+# 📖 Recipe App <a name="about-project"></a>
 
 The Recipe app keeps track of all your recipes and ingredients. It will allow you to save ingredients, keep track of what you have, create recipes.
 
@@ -38,6 +41,8 @@ The Recipe app keeps track of all your recipes and ingredients. It will allow yo
   <summary>Client</summary>
   <ul>
     <li><a href="https://ruby-lang.org/">Ruby</a></li>
+    <li>HTML, CSS</li>
+    <li>JavaScript</li>
   </ul>
 </details>
 
@@ -50,11 +55,14 @@ The Recipe app keeps track of all your recipes and ingredients. It will allow yo
 
 ### Key Features <a name="key-features"></a>
 
+
 - Add a new food
 - Add a new recipe
 - Delete foods and recipes
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
@@ -63,6 +71,8 @@ To get a local copy up and running, follow these steps.
 ### Prerequisites
 
 In order to run this project you need:
+`Git` and `Ruby`
+
 
 - A text editor preferably [Visual Studio code](https://code.visualstudio.com/)
 - Latest version of [Ruby](https://www.ruby-lang.org/en/downloads/) installed
@@ -93,12 +103,15 @@ To run tests, run the following command:
 
 ```sh
   rspec
+  bundle install
 ```
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 ## 👥 Authors <a name="authors"></a>
+
 
 👤 **Abimbola Favour**
 
@@ -115,9 +128,11 @@ To run tests, run the following command:
 
 ## 🔭 Future Features <a name="future-features"></a>
 
+
 - [ ] A graphical user interface
 - [ ] Better information validation
 - [ ] A backend to store the data
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -125,7 +140,7 @@ To run tests, run the following command:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](../issues/).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -134,20 +149,25 @@ Feel free to check the [issues page](../../issues/).
 
 If you like this project, please leave a star 😁
 
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
+
 We would like to thank the Microverse staff for all the efforts they put in define the requirements of this project.
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-## ❓ FAQ (OPTIONAL) <a name="faq"></a>
+## ❓ FAQ <a name="faq"></a>
+
 
 - **Can I reuse this code?**
 
   - Yes, feel free to fork it
+
 
 - **Do I need knowledge of Ruby to use this project?**
 
