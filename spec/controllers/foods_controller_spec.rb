@@ -15,6 +15,5 @@ describe FoodsController, type: :controller do
     it 'should render index' do
       expect(response).to render_template(:index)
     end
-
   end
 end

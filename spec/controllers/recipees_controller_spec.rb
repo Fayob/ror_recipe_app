@@ -1,4 +1,4 @@
-require './spec/rails_helper' 
+require './spec/rails_helper'
 require_relative '../support/devise'
 
 describe FoodsController, type: :controller do
@@ -15,7 +15,6 @@ describe FoodsController, type: :controller do
     it 'should render index' do
       expect(response).to render_template(:index)
     end
-
   end
 
   describe 'test for show method' do

@@ -5,8 +5,8 @@ RSpec.describe Food, type: :model do
                       password_confirmation: 'password')
 
   subject do
-    Recipee.new(user: @user, name: 'Recipe', preparation_time: '2 hours', 
-                cooking_time: '30 minutes', public: true, description: "Description here")
+    Recipee.new(user: @user, name: 'Recipe', preparation_time: '2 hours',
+                cooking_time: '30 minutes', public: true, description: 'Description here')
   end
 
   before { subject.save }
