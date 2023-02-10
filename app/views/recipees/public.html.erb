@@ -7,13 +7,13 @@
       <h2><%= recipe.name %></h2>
       <p>By: <%= recipe.user.name %></p>
       <h5>Total food item: <%= recipe.foods.length %></h5>
-      <% sum = 0%>
+      <% sum = 0 %>
       <% recipe.foods.each do |food| %>
         <% sum += food.price %>
       <% end %>
       <h5>Total Price:  <%= sum %> </h5>
       <p> description <%= recipe.description %></p>
     </div>
-    <p><%= link_to 'Show Recipe', recipe_path(recipe) %></p>
+    <p><%= link_to 'Show Recipe', recipee_path(recipe) %></p>
   <% end %>
 <% end %>

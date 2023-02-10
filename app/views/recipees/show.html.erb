@@ -6,7 +6,7 @@
 </div>
 
 <% if @recipe.foods.empty? %>
-  <%# <h4>This Recipe has no food attached to it</h4> %>
+  <h4>This Recipe has no food attached to it</h4>
   <%= link_to 'Add Food', new_food_path %>
 <% else %>
   <div>
@@ -21,12 +21,14 @@
       </thead>
       <tbody>
         <% @recipe.foods.each do |food| %>
-        <tr>
-          <td><%= food.name %></td> 
-          <td><%= food.quantity %></td>
-          <td><%= '$' + food.price.to_s %></td>
-          <td><%=  button_to 'Delete', food_path(food), form: { data: { turbo_confirm: "Are you sure?" } },  method: :delete %> </td>
-        </tr>
+          <tr>
+            <td><%= food.name %></td> 
+            <td><%= food.quantity %></td>
+            <td><%= '$' + food.price.to_s %></td>
+            <% if can? :delete, food %>
+            <td><%=  button_to 'Delete', food_path(food), form: { data: { turbo_confirm: "Are you sure?" } },  method: :delete %> </td>
+            <% end %>
+          </tr>
         <% end %>
       </tbody>
     </table><br>

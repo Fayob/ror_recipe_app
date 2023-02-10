@@ -1,5 +1,5 @@
 class FoodsController < ApplicationController
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
   def index
     @foods = Food.where(user: current_user)
@@ -9,10 +9,11 @@ class FoodsController < ApplicationController
     @food = Food.new
   end
 
-  def create
+  def create_food
     @food = Food.new(user: current_user, name: food_param['name'],
                      measurement_unit: food_param['measurement_unit'],
                      price: food_param['price'], quantity: food_param['quantity'])
+
     if @food.save
       flash[:notice] = 'Food Added Successfully'
       redirect_to foods_path

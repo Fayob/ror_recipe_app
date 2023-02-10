@@ -1,8 +1,9 @@
-class RecipesController < ApplicationController
-  # load_and_authorize_resource
+class RecipeesController < ApplicationController
+  skip_authorization_check only: %i[public show]
+  load_and_authorize_resource except: %i[public show]
 
   def index
-    @recipes = Recipee.where(user: current_user)
+    @recipes = Recipee.where(user: current_user).order(created_at: :desc)
   end
 
   def public
@@ -17,7 +18,7 @@ class RecipesController < ApplicationController
     @recipe = Recipee.new
   end
 
-  def create
+  def create_recipe
     @recipe = Recipee.new(user: current_user, name: recipe_param['name'],
                           public: public?,
                           description: recipe_param['description'],
@@ -25,9 +26,18 @@ class RecipesController < ApplicationController
                           cooking_time: recipe_param['cooking_time'])
     if @recipe.save
       flash[:notice] = 'Recipe Added Successfully'
-      redirect_to recipes_path
+      redirect_to recipees_path
     else
       render 'new'
+    end
+  end
+
+  def destroy
+    @recipe = Recipee.find(params[:id])
+    @recipe.destroy
+    respond_to do |format|
+      format.html { redirect_to recipees_path, notice: 'food was successfully deleted.' }
+      format.json { head :no_content }
     end
   end
 
