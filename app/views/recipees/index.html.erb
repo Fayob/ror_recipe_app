@@ -1,12 +1,8 @@
 <% if @recipes.empty? %>
   <p>You currently don't have any recipe available </p>
-  <% if can? :create, @recipes %>
-    <%= link_to 'Add Recipe', new_recipee_path %>
-  <% end %>
+  <%= link_to 'Add Recipe', new_recipee_path %>
 <% else %>
-  <% if can? :create, @recipes %>
-    <%= link_to 'Add Recipe', new_recipee_path %>
-  <% end %>
+  <%= link_to 'Add Recipe', new_recipee_path %>
   <div>
     <% @recipes.each do |recipe| %>
       <h2><%= recipe.name%></h2>
