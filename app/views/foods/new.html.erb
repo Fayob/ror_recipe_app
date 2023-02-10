@@ -1,5 +1,6 @@
 <h1>Create New Food</h1>
 
+
 <% if @food.errors.any? %>
   <h2>The following errors prevent the food from being saved</h2>
   <ul>
@@ -8,7 +9,6 @@
     <% end %>
   </ul>
 <% end %>
-
 <%= form_with model: @food, url: foods_path, local: true do |form| %>
   <%= form.label :name %>
   <%= form.text_field :name %> <br><br>
