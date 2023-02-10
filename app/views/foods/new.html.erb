@@ -1,0 +1,26 @@
+<h1>Create New Food</h1>
+
+
+<% if @food.errors.any? %>
+  <h2>The following errors prevent the food from being saved</h2>
+  <ul>
+    <%@food.errors.full_messages.each do |msg| %>
+      <li> <%= msg %> </li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with model: @food, url: foods_path, local: true do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %> <br><br>
+
+  <%= form.label :measurement_unit %>
+  <%= form.text_field :measurement_unit, placeholder: 'grams' %> <br><br>
+
+  <%= form.label :price %>
+  <%= form.text_field :price %> <br><br>
+
+  <%= form.label :quantity %>
+  <%= form.text_field :quantity %> <br><br>
+
+  <%= form.submit %>
+<% end %>

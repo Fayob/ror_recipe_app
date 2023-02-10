@@ -1,0 +1,16 @@
+<% if @recipes.empty? %>
+  <p>You currently don't have any recipe available </p>
+  <%= link_to 'Add Recipe', new_recipee_path %>
+<% else %>
+  <%= link_to 'Add Recipe', new_recipee_path %>
+  <div>
+    <% @recipes.each do |recipe| %>
+      <h2><%= recipe.name%></h2>
+      <h2><%= recipe.description%></h2>
+      <p><%= link_to 'Show Recipe', recipee_path(recipe) %></p>
+      <% if can? :delete, recipe %>
+        <p> <%= button_to 'Remove', recipee_path(recipe), form: { data: { turbo_confirm: "Are you sure?" } },  method: :delete %> </p>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

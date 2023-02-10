@@ -1,0 +1,19 @@
+<h2> Public Recipe </h2>
+<% if @recipes.empty? %>
+  <h4>There is currently no public recipe in your recipes list</h4>
+<% else %>
+  <% @recipes.each do |recipe|%>
+    <div>
+      <h2><%= recipe.name %></h2>
+      <p>By: <%= recipe.user.name %></p>
+      <h5>Total food item: <%= recipe.foods.length %></h5>
+      <% sum = 0 %>
+      <% recipe.foods.each do |food| %>
+        <% sum += food.price %>
+      <% end %>
+      <h5>Total Price:  <%= sum %> </h5>
+      <p> description <%= recipe.description %></p>
+    </div>
+    <p><%= link_to 'Show Recipe', recipee_path(recipe) %></p>
+  <% end %>
+<% end %>
