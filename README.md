@@ -131,7 +131,7 @@ To run tests, run the following command:
 
 - [ ] A graphical user interface
 - [ ] Better information validation
-- [ ] A backend to store the data
+- [ ] An API backend to store the data
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
