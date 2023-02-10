@@ -4,7 +4,7 @@
   box-sizing: border-box;
   max-width: 100%;
   max-height: 100%;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 html {
@@ -57,9 +57,9 @@ td {
 .navbar {
   display: flex;
   justify-content: center;
-  background: #b0a5a5;
+  background: #a59c9c;
   justify-items: center;
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -74,7 +74,4 @@ td {
   margin-left: 1rem;
 }
 
-.log-out {
-    display: inline;
-    z-index: 1;
-}
+
